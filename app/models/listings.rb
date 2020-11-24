@@ -34,10 +34,15 @@ class Listing
 
     # finds the listing that has had the most trips
     # def self.most_popular
-    #     Listing.all.select do |listing|
-    #         listing.trip_count
+        
+    #     Listing.all.collect do |listing|
+    #         trips = 0
+    #         if listing.trip_count > trips
+    #             listing.trip_count = trips
+    #         end
+            
     #     end
-    #     # trip_counts.max
+        
     # end
 
     # takes argument of city name
