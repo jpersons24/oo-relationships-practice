@@ -18,30 +18,30 @@ Complete the following deliverables.  You may choose to make additional helper m
 
 #### Passenger
 
-- #name 
-  - returns the name of the passenger
-- #rides
+<!-- - #name 
+  - returns the name of the passenger -->
+<!-- - #rides
   - returns all rides a passenger has been on
 - #drivers
-  - returns all drivers a passenger has ridden with
-- .all
-  - returns an array of all passengers
-- #total_distance
+  - returns all drivers a passenger has ridden with -->
+<!-- - .all
+  - returns an array of all passengers -->
+<!-- - #total_distance
   - should calculate the total distance the passenger has travelled with the
     service
 - .premium_members
-  - should find all passengers who have travelled over 100 miles with the service
+  - should find all passengers who have travelled over 100 miles with the service -->
 
 #### Driver
 
-- #name 
-  - returns the name of the driver
+<!-- - #name 
+  - returns the name of the driver -->
 - #rides
   - returns all rides a driver has made
 - #passengers
   - returns all passengers a driver has had
-- .all
-  - returns an array of all drivers
+<!-- - .all
+  - returns an array of all drivers -->
 - .mileage_cap(distance)
   - takes an argument of a distance (float) and returns all drivers who have exceeded that mileage
 

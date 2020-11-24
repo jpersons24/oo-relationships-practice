@@ -30,7 +30,7 @@ class Bakery
     # finds total amount of calories for desserts sold at this bakery
     def total_calories
         Ingredients.all.select do |ingredient|
-            if ingredient
+            
         end
     end
 
