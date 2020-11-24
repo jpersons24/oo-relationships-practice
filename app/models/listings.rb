@@ -1,9 +1,6 @@
-# a listing has many trips
-# city attr = "city name"
+class Listing
 
-class Listings
-
-    attr_accessor :city
+    attr_reader :city
     @@all = []
 
     def initialize(city)
@@ -11,43 +8,44 @@ class Listings
         @@all << self
     end
 
+    # returns array of all instance of Listing
     def self.all
         @@all
     end
 
+    # returns array of all trips at Listing
     def trips
-        Trips.all.select do |trip|
+        Trip.all.select do |trip|
             trip.listing == self
         end
     end
 
+    # returns number of trips at Listing
+    def trip_count
+        trips.length
+    end
+
+    # returns array of all guests who have stayed at Listing
     def guests
         trips.collect do |trip|
-            trip.guest
+            trip.guests
         end
     end
 
-    def trip_count
-        trips.count
-    end
+    # finds the listing that has had the most trips
+    # def self.most_popular
+    #     Listing.all.select do |listing|
+    #         listing.trip_count
+    #     end
+    #     # trip_counts.max
+    # end
 
+    # takes argument of city name
+    # returns all listings for that city
     def self.find_all_by_city(city)
-        Listings.all.collect do |listing|
+        Listing.all.select do |listing|
             listing.city == city
         end
     end
 
-    def self.most_popular
-        Listings.all.max do |listing1, listing2|
-            listing1.trip_count <=> listing2.trip_count
-        end
-    end
 end
-
-
-# Listings
-# sodus = Listings.new("Sodus")
-# palm_beach = Listings.new("Palm Beach")
-# denver = Listings.new("Denver")
-# san_diego = Listings.new("San Diego")
-# charleston = Listings.new("Charleston")

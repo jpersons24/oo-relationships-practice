@@ -2,25 +2,19 @@
 # require_relative "../app/models/listings.rb"
 
 
-class Trips
+class Trip
 
-    attr_reader :guest, :listing
+    attr_reader :listing, :guests
     @@all = []
 
-    def initialize(guest, listing)
-        @guest = guest
+    def initialize(listing, guests)
         @listing = listing
+        @guests = guests
         @@all << self
     end
 
     def self.all
         @@all
     end
-end
 
-# Trips
-# cali = Trips.new(persons, san_diego)
-# christmas = Trips.new(dilonardo, palm_beach)
-# sodus_point = Trips.new(persons, sodus)
-# red_rocks = Trips.new(persons, denver)
-# family_vacation = Trips.new(smith, charleston)
+end
