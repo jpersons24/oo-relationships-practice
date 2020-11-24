@@ -5,7 +5,7 @@ def reload
 end
 
 
-# variables
+# variables ---> listings, guests and there many trips
 
 new_york = Listing.new("New York")
 chicago = Listing.new("Chicago")
